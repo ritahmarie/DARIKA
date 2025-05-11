@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poudre de cacao - DARIKA</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../style-darika.css">
+  <style>
+    body { background-color: #f7f3ef; padding: 20px; font-family: 'Segoe UI', sans-serif; }
+    .product-img { border-radius: 16px; width: 120px; margin: 10px auto; display: block; cursor: pointer; }
+    h1, h2 { color: #3FA535; text-align: center; }
+    p, ul { max-width: 800px; margin: 0 auto 20px auto; font-size: 1.1rem; color: #333; }
+    ul { padding-left: 20px; }
+    .sizes-container { display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; margin: 30px 0; text-align: center; }
+    footer { background-color: #333; color: white; text-align: center; padding: 30px; margin-top: 40px; }
+    .lightbox-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .lightbox-overlay img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+    .highlight-message {
+      text-align: center;
+      font-size: 1.2rem;
+      margin: 20px auto;
+      color: #2c6e31;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 shadow-sm mb-4">
+    <a class="navbar-brand" href="../index.html"><img src="../images/darika-logo.jpg" alt="DARIKA" height="50"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="produitsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Produits
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="produitsDropdown">
+            <li><a class="dropdown-item" href="poudre.html">Poudre de cacao</a></li>
+            <li><a class="dropdown-item" href="feves.html">Fèves de cacao</a></li>
+            <li><a class="dropdown-item" href="gommage.html">Gommage au cacao</a></li>
+            <li><a class="dropdown-item" href="huile.html">Huile de cacao</a></li>
+            <li><a class="dropdown-item" href="huile.html">Sac de cacao frais</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <h1>Poudre de cacao DARIKA</h1>
+  <img src="../images/poudre-cacao.jpg" alt="Poudre de cacao DARIKA" class="product-img zoomable">
+
+  <div id="selected-format" class="highlight-message"></div>
+
+  <h2>Description</h2>
+  <p>Notre poudre de cacao est issue de fèves soigneusement sélectionnées et transformées artisanalement au Cameroun. Elle est non sucrée, 100% naturelle et sans additifs. Elle conserve tous ses nutriments et son goût riche.</p>
+
+  <h2>Ingrédients</h2>
+  <ul>
+    <li>100% fèves de cacao torréfiées et broyées</li>
+    <li>Sans sucre ajouté</li>
+    <li>Sans arômes artificiels</li>
+  </ul>
+
+  <h2>Bienfaits</h2>
+  <ul>
+    <li>Riche en antioxydants (flavonoïdes)</li>
+    <li>Source de magnésium, fer et potassium</li>
+    <li>Améliore l'humeur et stimule la concentration</li>
+    <li>Bon pour la peau (masques, gommages)</li>
+  </ul>
+
+  <h2>Utilisations</h2>
+  <ul>
+    <li>Recettes pâtissières (gâteaux, cookies, muffins)</li>
+    <li>Boissons (chocolat chaud, smoothies)</li>
+    <li>Soins cosmétiques (masques visage, exfoliants)</li>
+  </ul>
+
+  <h2>Formats disponibles</h2>
+<div class="sizes-container">
+  <div>
+    <img src="../images/poudre-100g.png" alt="Poudre 100g" class="product-img">
+    <p>100g : 1 500 FCFA</p>
+    <label for="quantite" class="form-label">Quantité :</label>
+      <select id="quantite" class="form-select form-select-sm w-25 mb-3">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    <div style="display:flex; gap:10px; justify-content:center;">
+      <button class="btn btn-outline-success btn-sm" onclick="ajouterAuPanier('Poudre de cacao', '100g')">Ajouter au panier</button>
+      <a href="commander.html?produit=Poudre de cacao&format=100g" class="btn btn-primary">Commander</a>
+    </div>
+  </div>
+
+  <div>
+    <img src="../images/poudre-250g.png" alt="Poudre 250g" class="product-img">
+    <p>250g : 3 000 FCFA</p>
+    <label for="quantite" class="form-label">Quantité :</label>
+      <select id="quantite" class="form-select form-select-sm w-25 mb-3">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    <div style="display:flex; gap:10px; justify-content:center;">
+      <button class="btn btn-outline-success btn-sm" onclick="ajouterAuPanier('Poudre de cacao', '250g')">Ajouter au panier</button>
+      <a href="commander.html?produit=Poudre de cacao&format=250g" class="btn btn-primary">Commander</a>
+    </div>
+  </div>
+
+  <div>
+    <img src="../images/poudre-500g.png" alt="Poudre 500g" class="product-img">
+    <p>500g : 5 500 FCFA</p>
+    <label for="quantite" class="form-label">Quantité :</label>
+      <select id="quantite" class="form-select form-select-sm w-25 mb-3">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    <div style="display:flex; gap:10px; justify-content:center;">
+      <button class="btn btn-outline-success btn-sm" onclick="ajouterAuPanier('Poudre de cacao', '500g')">Ajouter au panier</button>
+      <a href="commander.html?produit=Poudre de cacao&format=500g" class="btn btn-primary">Commander</a>
+    </div>
+  </div>
+
+  <div>
+    <img src="../images/poudre-1kg.png" alt="Poudre 1kg" class="product-img">
+    <p>kg : 10 000 FCFA</p>
+    <label for="quantite" class="form-label">Quantité :</label>
+      <select id="quantite" class="form-select form-select-sm w-25 mb-3">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    <div style="display:flex; gap:10px; justify-content:center;">
+      <button class="btn btn-outline-success btn-sm" onclick="ajouterAuPanier('Poudre de cacao', '1kg')">Ajouter au panier</button>
+      <a href="commander.html?produit=Poudre de cacao&format=1kg" class="btn btn-primary">Commander</a>
+    </div>
+  </div>
+</div>
+
+
+  <p style="text-align:center;">Commandez dès maintenant via notre site internet</a> ou passez en boutique !</p>
+
+  <footer>
+    <p>&copy; 2025 DARIKA - Tous droits réservés.</p>
+    <h5>&copy; 2025 DARIKA - Tous droits réservés.</h5>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox-overlay" id="lightbox">
+    <img src="" alt="Zoom image" id="lightbox-img">
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Zoom image
+    document.querySelectorAll('.zoomable').forEach(img => {
+      img.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById('lightbox-img').src = img.src;
+        document.getElementById('lightbox').style.display = 'flex';
+      });
+    });
+    document.getElementById('lightbox').addEventListener('click', () => {
+      document.getElementById('lightbox').style.display = 'none';
+    });
+
+    // Affichage dynamique du format depuis URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const format = urlParams.get('format');
+    if (format) {
+      document.getElementById('selected-format').textContent = `👉 Vous avez sélectionné le format : ${format}`;
+    }
+  </script>
+<script>
+    function ajouterAuPanier(produit, format, quantite = 1) {
+  const panier = JSON.parse(localStorage.getItem('panier')) || [];
+  panier.push({ produit, format, quantite });
+  localStorage.setItem('panier', JSON.stringify(panier));
+  alert(`Ajouté au panier : ${produit} (${format}) x${quantite}`);
+}
+
+    </script>
+    
+</body>
+</html>

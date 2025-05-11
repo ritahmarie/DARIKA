@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notre Équipe - DARIKA</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style-darika.css">
+  <style>
+    body {
+      background-color: #f7f3ef;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
+    }
+    .container {
+      max-width: 1000px;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      margin: auto;
+    }
+    h1, h2 {
+      color: #3FA535;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .member {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    .member img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-right: 25px;
+      border: 4px solid #3FA53533;
+    }
+    .member-info {
+      flex: 1;
+    }
+    .member-info h3 {
+      margin-bottom: 5px;
+      color: #3FA535;
+    }
+    .member-info p {
+      margin: 0;
+      font-size: 1rem;
+      color: #555;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .member {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .member img {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 shadow-sm mb-4">
+    <a class="navbar-brand" href="index.html"><img src="../images/darika-logo.jpg" alt="DARIKA" height="50"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link" href="mission.html">Notre mission</a></li>
+        <li class="nav-item"><a class="nav-link active" href="equipe.html">Équipe</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- CONTENU -->
+  <div class="container">
+    <h1>Notre Équipe</h1>
+    <p class="text-center mb-5">
+      Chez DARIKA, chaque membre de l’équipe joue un rôle essentiel dans la réussite de notre mission. Nous mettons en avant les compétences locales, la passion pour le cacao et l'engagement envers la qualité et le développement durable.
+    </p>
+
+    <div class="member">
+      <img src="../images/meka.jpg" alt="Meka Aurdic">
+      <div class="member-info">
+        <h3>Meka Aurdic</h3>
+        <p><strong>Directeur Général</strong></p>
+        <p>Visionnaire et fondateur de DARIKA, il supervise la stratégie globale de l’entreprise et veille au respect de nos valeurs : éthique, qualité, proximité.</p>
+      </div>
+    </div>
+
+    <div class="member">
+      <img src="../images/lucette.jpg" alt="Lucette">
+      <div class="member-info">
+        <h3>Lucette</h3>
+        <p><strong>Esthéticienne & Formulatrice</strong></p>
+        <p>Spécialiste des soins naturels, elle conçoit les recettes de nos gommages et veille à leur douceur et efficacité pour la peau.</p>
+      </div>
+    </div>
+
+    <div class="member">
+      <img src="../images/erica.jpg" alt="Muka Erica">
+      <div class="member-info">
+        <h3>Muka Erica</h3>
+        <p><strong>Responsable Qualité</strong></p>
+        <p>Garantie de la qualité, elle contrôle chaque étape de transformation pour assurer un produit sain, traçable et conforme aux normes.</p>
+      </div>
+    </div>
+
+    <div class="member">
+      <img src="../images/daren.jpg" alt="Daren Edima">
+      <div class="member-info">
+        <h3>Daren Edima</h3>
+        <p><strong>Responsable des Ventes</strong></p>
+        <p>En contact direct avec les clients, il développe les relations commerciales, coordonne les commandes et assure un service client personnalisé.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 DARIKA - Tous droits réservés.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

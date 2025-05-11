@@ -1,0 +1,300 @@
+:root {
+  --color-primary: #6b4226;
+  --color-secondary: #a47551;
+  --color-bg: #f7f3ef;
+  --color-light: #fff8f2;
+  --color-text: #2e2b27;
+  --color-accent: #4e342e;
+  --font-main: 'Montserrat', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+h1, h2, h3 {
+  color: var(--color-accent);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+nav a {
+  font-weight: bold;
+  color: var(--color-accent);
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--color-secondary);
+}
+
+.logo {
+  height: 70px;
+  border-radius: 12px;
+}
+
+.hero {
+  background-image: url("../images/banniere-plantation.jpeg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero * {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5em;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #4d2e1d;
+  transform: scale(1.05);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 0.3em;
+}
+
+.intro-text {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 2.5em;
+  color: #5e534a;
+}
+
+.product-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: var(--color-light);
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  margin-bottom: 40px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-img {
+  width: 100%;
+  max-width: 400px;
+  object-fit: cover;
+  border-radius: 16px;
+  border-right: 1px solid #eee;
+}
+
+.product-info {
+  flex: 1;
+  padding: 25px;
+}
+
+.product-info h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--color-accent);
+}
+
+.description {
+  font-style: italic;
+  color: #6d5f54;
+}
+
+.long-description {
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  color: #5e534a;
+}
+
+.product-info ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 15px 0;
+}
+
+.product-info ul li::before {
+  content: "🍃 ";
+  margin-right: 5px;
+  color: var(--color-secondary);
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 15px 0;
+  color: var(--color-primary);
+}
+
+footer {
+  background-color: var(--color-accent);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .header-container,
+  .product-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    justify-content: center;
+  }
+
+  .product-img {
+    width: 100%;
+    max-width: 320px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    border-right: none;
+  }
+
+  .product-info {
+    padding: 20px;
+  }
+}
+
+.double-image-block {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.double-image-block figure {
+  text-align: center;
+  margin: 0;
+  flex: 1;
+  max-width: 45%;
+}
+
+.image-rectangle {
+  border-radius: 16px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.double-image-block figcaption {
+  margin-top: 8px;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.lightbox-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  animation: zoomIn 0.3s ease;
+}
+.footer {
+  background-color: #333 !important;
+  color: white !important;
+  padding: 40px 20px !important;
+}
+.footer a {
+  color: white !important;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+

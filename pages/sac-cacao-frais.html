@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commande - Sac de cacao frais</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background: #f7f7f7; padding: 30px; }
+    .box {
+      background: white;
+      padding: 40px;
+      max-width: 600px;
+      margin: auto;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    h2 { color: #3FA535; text-align: center; }
+    .product-image {
+      max-width: 150px;
+      display: block;
+      margin: 0 auto 20px auto;
+      border-radius: 10px;
+    }
+    .btn-success { background-color: #3FA535; border: none; }
+    .btn-outline-success { color: #3FA535; border-color: #3FA535; }
+    .btn-outline-success:hover { background-color: #3FA535; color: white; }
+  </style>
+</head>
+<body>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white px-4 shadow-sm mb-4">
+  <a class="navbar-brand" href="../index.html"><img src="../images/darika-logo.jpg" alt="DARIKA" height="50"></a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="produitsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Produits
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="produitsDropdown">
+          <li><a class="dropdown-item" href="poudre.html">Poudre de cacao</a></li>
+          <li><a class="dropdown-item" href="feves.html">Fèves de cacao</a></li>
+          <li><a class="dropdown-item" href="gommage.html">Gommage au cacao</a></li>
+          <li><a class="dropdown-item" href="huile.html">Huile de cacao</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+  <div class="box">
+    <h2>Commander un sac de cacao frais</h2>
+    <img src="../images/sac-cacao.png" alt="Sac de cacao" class="product-image">
+    <p class="text-center mt-2">50Kg : 390 000 FCFA</p>
+
+    
+
+    <p class="text-center">
+      Sac de 50 kg de fèves de cacao fraîches, issues de nos plantations durables au Cameroun. Idéal pour les torréfacteurs, artisans chocolatiers et industriels du cacao.
+    </p>
+    <label for="quantite" class="form-label">Quantité :</label>
+    <select id="quantite" class="form-select form-select-sm w-25 mb-3">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+
+    <!-- BOUTONS -->
+    <div class="text-center mb-4">
+      <button onclick="ajouterAuPanier('Sac de cacao frais', '50 kg')" class="btn btn-outline-success me-2">Ajouter au panier</button>
+      <a href="commander.html?produit=Sac de cacao frais&format=50kg" class="btn btn-primary">Commander</a>
+    </div>
+  </div>
+
+  <script>
+    function ajouterAuPanier(produit, format) {
+      const panier = JSON.parse(localStorage.getItem('panier')) || [];
+      panier.push({ produit, format });
+      localStorage.setItem('panier', JSON.stringify(panier));
+      alert(`Ajouté au panier : ${produit} (${format})`);
+    }
+  </script>
+
+
+</body>
+</html>

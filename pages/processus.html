@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notre Processus – DARIKA</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+</head>
+<body>
+
+  <header>
+    <div class="container header-container">
+      <img src="../images/logo-darika.png" alt="Logo DARIKA" class="logo" />
+      <nav>
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="produits.html">Nos Produits</a></li>
+          <li><a href="processus.html" class="active">Processus</a></li>
+          <li><a href="boutique.html">Boutique</a></li>
+          <li><a href="engagements.html">Engagements</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Fil d'Ariane -->
+    <nav class="breadcrumb">
+      <a href="../index.html">Accueil</a> &gt; <span>Processus</span>
+    </nav>
+
+    <h1 class="section-title">Notre Processus de Fabrication</h1>
+    <p class="intro-text">Chez DARIKA, chaque étape est respectueuse de la nature, de l'humain et du goût. Nous valorisons le travail manuel, local et durable.</p>
+
+    <div class="timeline">
+
+      <!-- Étape 1 : Culture -->
+      <div class="timeline-step" data-aos="fade-up">
+        <h2>🌱 Culture durable</h2>
+        <p>Nos plantations sont situées dans la région du centre du Cameroun. Nous cultivons le cacao en agroécologie : sans produits chimiques, avec compost naturel et ombrage raisonné.</p>
+        <img src="../images/OIP.jpeg" alt="Plantation de cacao" class="product-img" />
+      </div>
+
+      <!-- Étape 2 : Récolte + écabossage -->
+      <div class="timeline-step" data-aos="fade-up">
+        <h2>✂️ Récolte manuelle & écabossage</h2>
+        <p>Les cabosses sont récoltées à la main à maturité. Ensuite, vient l’écabossage : les fruits sont ouverts un à un pour extraire les fèves, sans abîmer leur structure naturelle.</p>
+        <img src="../images/galerie-4.webp" alt="Récolte de cacao" class="product-img" />
+
+        <!-- Option : vidéo d’écabossage -->
+        <video class="product-img" controls muted autoplay loop>
+          <source src="../videos/ecabossage.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la vidéo.
+        </video>
+      </div>
+
+     <!-- Étape 3 : Fermentation & séchage -->
+<div class="timeline-step" data-aos="fade-up">
+    <h2>🍃 Fermentation & Séchage</h2>
+    <p>
+      Les fèves sont fermentées dans des caisses en bois pendant 5 à 7 jours. Elles sont ensuite séchées naturellement au soleil sur des claies en bambou. Aucun additif n’est utilisé.
+    </p>
+  
+    <div class="double-image-block">
+      <figure>
+        <img src="../images/fermentation-sechage.jpg" alt="Séchage cacao" class="image-rectangle" />
+        <figcaption>Séchage</figcaption>
+      </figure>
+  
+      <figure>
+        <img src="../images/fermentation.jpg" alt="Fermentation cacao" class="image-rectangle" />
+        <figcaption>Fermentation</figcaption>
+      </figure>
+    </div>
+  </div>
+  
+
+      <!-- Étape 4 : Transformation artisanale -->
+      <div class="timeline-step" data-aos="fade-up">
+        <h2>⚙️ Transformation artisanale</h2>
+        <p>Dans notre atelier, les fèves sont torréfiées à basse température, broyées puis transformées à la main en produits finis : poudre, huile, gommage.</p>
+        <img src="../images/galerie-1.jpg" alt="Transformation cacao" class="product-img" />
+
+        <!-- Option : vidéo de transformation -->
+        <video class="product-img" controls muted autoplay loop>
+          <source src="../videos/atelier-cacao.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la vidéo.
+        </video>
+      </div>
+
+      <!-- Étape 5 : Qualité & engagements -->
+      <div class="timeline-step" data-aos="fade-up">
+        <h2>🔒 Qualité & Engagements</h2>
+        <p>Nos produits sont 100% naturels, sans conservateurs ni colorants. Ils sont issus du commerce équitable et traçables de la plantation jusqu’à la vente.</p>
+        <img src="../images/galerie-2.jpg" alt="Engagement qualité cacao" class="product-img" />
+        <img src="../images/nos-produits.png" alt="Engagement qualité cacao" class="product-img" />
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="container footer-container">
+      <p>&copy; 2025 DARIKA. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- AOS animation -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <!DOCTYPE html>
+  <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produits - DARIKA</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style-darika.css">
+    <style>
+      .product-image {
+        border-radius: 16px;
+        width: 180px;
+        height: auto;
+        margin: 10px;
+      }
+      .product-section {
+        margin-bottom: 40px;
+      }
+      h2.section-title {
+        text-align: center;
+        margin: 40px 0 20px;
+        color: #3FA535;
+      }
+      .description {
+        font-size: 1.1rem;
+        color: #444;
+        text-align: justify;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container mt-4">
+      <h1 class="text-center">Nos Produits</h1>
+      <p class="text-center">Découvrez notre gamme 100% naturelle, transformée artisanalement au Cameroun.</p>
+    </header>
+  
+    <main class="container">
+      <div class="row justify-content-center mb-5">
+        <img src="images/poudre-cacao.jpg" alt="Poudre de cacao" class="product-image">
+        <img src="images/feves-cacao.jpg" alt="Fèves de cacao" class="product-image">
+        <img src="images/gommage-cacao-darika.png" alt="Gommage au cacao" class="product-image">
+        <img src="images/huile-cacao-darika.png" alt="Huile de cacao" class="product-image">
+      </div>
+  
+      <h2 class="section-title">Détail des produits</h2>
+  
+      <section class="product-section">
+        <h3>Poudre de cacao</h3>
+        <p class="description">
+          Poudre de cacao pure, non sucrée, idéale pour vos recettes culinaires, boissons chocolatées et soins de la peau. Riche en antioxydants, magnésium et fer. 100% naturel, sans additifs.
+        </p>
+      </section>
+  
+      <section class="product-section">
+        <h3>Fèves de cacao emballées</h3>
+        <p class="description">
+          Nos fèves sélectionnées à la main proviennent de plantations écologiques. Elles sont fermentées et séchées naturellement pour conserver leur arôme. Idéales pour les artisans chocolatiers ou l'infusion.
+        </p>
+      </section>
+  
+      <section class="product-section">
+        <h3>Gommage au cacao</h3>
+        <p class="description">
+          Gommage doux à base de cacao et d'huiles naturelles. Exfolie en douceur, nourrit et détoxifie la peau. Convient à tous types de peau. Produit artisanal, fait main.
+        </p>
+      </section>
+  
+      <section class="product-section">
+        <h3>Huile de cacao</h3>
+        <p class="description">
+          Pressée à froid, notre huile de cacao est un soin réparateur naturel. Elle hydrate en profondeur, répare les cheveux secs, et apaise les peaux irritées. Utilisation cosmétique et culinaire.
+        </p>
+      </section>
+  
+      <h2 class="section-title">Prix et options d’achat</h2>
+      <p class="description">
+        Nos produits sont disponibles en ligne et en boutique. Chaque produit est décliné en formats variés (100g, 250g, 500g, 1kg). Contactez-nous pour un devis ou passez commande directement depuis notre site.
+      </p>
+    </main>
+  
+    <footer class="footer mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h5>DARIKA</h5>
+            <p>Entreprise camerounaise valorisant le cacao local.</p>
+          </div>
+          <div class="col-md-4">
+            <h5>Navigation</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html" class="text-white">Accueil</a></li>
+              <li><a href="produits.html" class="text-white">Produits</a></li>
+              <li><a href="contact.html" class="text-white">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5>Contact</h5>
+            <p>Email : contact@darika.com</p>
+            <p>Tél : +237 6 XX XX XX XX</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="lightbox-overlay" id="lightbox">
+      <img src="" alt="Image zoomée" id="lightbox-img">
+    </div>
+    <script>
+      document.querySelectorAll('.product-img').forEach(img => {
+        img.addEventListener('click', () => {
+          const lightbox = document.getElementById('lightbox');
+          const lightboxImg = document.getElementById('lightbox-img');
+          lightboxImg.src = img.src;
+          lightbox.style.display = 'flex';
+        });
+      });
+    
+      document.getElementById('lightbox').addEventListener('click', () => {
+        document.getElementById('lightbox').style.display = 'none';
+      });
+    </script>
+     
+  </body>
+  </html>
+

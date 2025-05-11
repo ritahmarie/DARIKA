@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commander - DARIKA</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background: #f7f7f7; padding: 30px; }
+    .box { background: white; padding: 40px; max-width: 600px; margin: auto; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+    h2 { color: #3FA535; }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h2>Commande</h2>
+    <p id="product-info">Chargement...</p>
+
+    <form action="mailto:contact@darika.com" method="POST" enctype="text/plain">
+      <input type="hidden" name="Produit" id="produitField">
+      <input type="hidden" name="Format" id="formatField">
+
+      <div class="mb-3">
+        <label class="form-label">Nom complet</label>
+        <input type="text" class="form-control" name="Nom" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Adresse email</label>
+        <input type="email" class="form-control" name="Email" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Quantité souhaitée</label>
+        <input type="number" class="form-control" name="Quantité" id="quantiteField" min="1" value="1" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Message</label>
+        <textarea class="form-control" name="Message" rows="4" placeholder="Adresse de livraison, commentaires..."></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-success">Envoyer la commande</button>
+    </form>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const produit = params.get("produit");
+    const format = params.get("format");
+    const quantite = params.get("quantite") || "1";
+
+    document.getElementById("product-info").textContent = `Votre commande : ${produit || ''} - ${format || ''} (x${quantite})`;
+    document.getElementById("produitField").value = produit || '';
+    document.getElementById("formatField").value = format || '';
+    document.getElementById("quantiteField").value = quantite;
+  </script>
+</body>
+</html>
