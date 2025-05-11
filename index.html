@@ -9,8 +9,16 @@
   <style>
     :root {
       --color-vert: #3FA535;
+      --color-primary: #6b4226;
+      --color-secondary: #a47551;
+      --color-bg: #f7f3ef;
+      --color-light: #fff8f2;
+      --color-text: #2e2b27;
+      --color-accent: #4e342e;
+      --font-main: 'Montserrat', sans-serif;
     }
-    body { font-family: 'Segoe UI', sans-serif; margin: 0; }
+
+    body { font-family: var(--font-main); margin: 0; }
     .carousel-item img { height: 100vh; object-fit: cover; width: 100%; }
     .hero-overlay {
       position: absolute;
@@ -24,53 +32,106 @@
       color: white;
       text-align: center;
     }
+
     .green-section {
       background-color: var(--color-vert);
       color: white;
       padding: 60px 20px;
     }
+
     .product-img {
-  max-height: 100px;
-  border-radius: 16px;
-  object-fit: cover;
-}
-    .origin-card img { width: 100%; }
+      max-height: 100px;
+      border-radius: 16px;
+      object-fit: cover;
+    }
+
     .footer {
       background-color: #333;
       color: white;
       padding: 40px 20px;
     }
+
     nav a {
       color: var(--color-vert) !important;
       font-weight: bold;
     }
+
     nav a:hover,
     nav a.active {
       color: #2b7a2c !important;
       text-decoration: underline;
     }
+
     .dropdown-menu a {
       color: #000 !important;
     }
+
     .lightbox-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.8);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
 
-.lightbox-overlay img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-}
+    .lightbox-overlay img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
 
+    /* Retirer le soulignement des liens dans la section "Nos Produits" */
+    #produits a {
+      text-decoration: none !important;
+      color: var(--color-vert);
+    }
+
+    /* Effet au survol : garder la couleur mais sans soulignement */
+    #produits a:hover {
+      text-decoration: none !important;
+      color: #2b7a55;
+    }
+
+    /* Espacement des produits */
+    #produits .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;  /* Ajout d'espacement entre les produits */
+    }
+
+    #produits .col-6 {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .header-container,
+      .product-card {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav ul {
+        justify-content: center;
+      }
+
+      .product-img {
+        width: 100%;
+        max-width: 320px;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 12px;
+        border-right: none;
+      }
+
+      .product-info {
+        padding: 20px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -117,8 +178,6 @@
               <li><a class="dropdown-item" href="pages/Actualités.html">Actualités</a></li>             
               <li><a class="dropdown-item" href="pages/collaboration.html">collaborations</a></li>
               <li><a class="dropdown-item" href="pages/blog.html">blog</a></li>
-              
-
             </ul>
           </li>
         <li class="nav-item dropdown">
@@ -165,7 +224,7 @@
     </div>
   </div>
 
- <!-- Produits -->
+<!-- Produits -->
 <div class="container text-center py-5" id="produits">
     <h2>Nos Produits</h2>
     <div class="row mt-4">
@@ -200,7 +259,8 @@
         </a>
       </div>
     </div>
-  </div>
+</div>
+
   
 
   <!-- Footer -->
@@ -211,15 +271,7 @@
           <h5>DARIKA</h5>
           <p>Entreprise camerounaise valorisant le cacao local</p>
         </div>
-        <div class="col-md-4">
-          <h5>Navigation</h5>
-          <ul class="list-unstyled">
-            <li><a href="index.html" class="text-white">Accueil</a></li>
-            <li><a href="produits.html" class="text-white">Produits</a></li>
-            <li><a href="#origines" class="text-white">Origines</a></li>
-            <li><a href="contact.html" class="text-white">Contact</a></li>
-          </ul>
-        </div>
+       
         <div class="col-md-4" id="contact">
           <h5>Contact</h5>
           <p>Email : contact@darika.com</p>
@@ -257,6 +309,5 @@
     });
   </script>
  
-  
 </body>
 </html>
